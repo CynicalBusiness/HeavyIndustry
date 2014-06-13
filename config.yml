@@ -1,0 +1,352 @@
+# Heavy Industry Configuration File
+# Please view the wiki on GitHub for configuration.
+# https://github.com/Wehttam664/Organizations/wiki/Configuring-Crytarian-Plug-ins#heavyindustry
+items:
+  REFORGED_IRON:
+    item: IRON_INGOT
+    name: Reforged Iron
+    lore: Crafting Ingredient
+  ESSENCE_OF_CORRUPTION:
+    item: FIREBALL
+    name: Essence of Corruption
+    lore: Crafting Ingredient
+  BIOMASS:
+    item: ROTTEN_FLESH
+    name: Biomass
+    lore: Crafting Ingredient
+  CORRUPT_BIOMASS:
+    item: MAGMA_CREAM
+    name: Corrupt Biomass
+    lore: Crafting Ingredient
+factories:
+  charcoal:
+    name: Charcoal Burner
+    layout:
+      blocks:
+        1:
+        - " E@E "
+        - " LCL "
+        2:
+        - "  *  "
+        - " FWF "
+        3:
+        - "     "
+        - "     "
+      binds:
+        E: FENCE
+        L: LOG
+        C: COAL_BLOCK
+        F: FURNACE
+        W: WORKBENCH
+    recipes:
+      charcoal1:
+        name: 'Charcoal Burning (1)'
+        time: 15
+        input:
+        - "         "
+        - " L L L L "
+        - " F F F F "
+        output:
+        - "         "
+        - " C C C C "
+        - "         "
+        binds:
+          L:
+            item: LOG
+            num: 32
+          F:
+            item: COAL
+            num: 4
+          C:
+            item: COAL
+            num: 64
+            dmg: 1
+      charcoal2:
+        name: 'Charcoal Burning (2)'
+        time: 15
+        input:
+        - "         "
+        - " L L L L "
+        - " F F F F "
+        output:
+        - "         "
+        - " C C C C "
+        - "         "
+        binds:
+          L:
+            item: LOG_2
+            num: 32
+          F:
+            item: COAL
+            num: 4
+          C:
+            item: COAL
+            num: 64
+            dmg: 1
+      charcoal_forging:
+        name: 'Charcoal Forging'
+        time: 15
+        input:
+        - "         "
+        - " L L L L "
+        - " F F F F "
+        output:
+        - "         "
+        - " C C C C "
+        - "         "
+        binds:
+          L:
+            item: COAL
+            num: 32
+          F:
+            item: COAL
+            num: 4
+          C:
+            item: COAL
+            num: 64
+            dmg: 1
+  metal_forge:
+    name: Metals Forge
+    layout:
+      blocks:
+        1:
+        - " A@A "
+        - " FBF "
+        2:
+        - "  *  "
+        - " FWF "
+        3:
+        - "     "
+        - "     "
+      binds:
+        A: ANVIL
+        F: FURNACE
+        B: IRON_BLOCK
+        W: WORKBENCH
+    recipes:
+      iron:
+        name: Iron Smelting
+        time: 45
+        input:
+        - "F       F"
+        - "  i   i  "
+        - "F       F"
+        output:
+        - "C I C I C"
+        - "C C C C C"
+        - "C I C I C"
+        binds:
+          F: 
+            item: COAL
+            num: 8
+          i:
+            item: IRON_ORE
+            num: 64
+          I:
+            item: IRON_INGOT
+            num: 48
+          C:
+            item: COBBLESTONE
+            num: 2
+      gold:
+        name: Gold Smelting
+        time: 45
+        input:
+        - "F       F"
+        - "  g   g  "
+        - "F       F"
+        output:
+        - "C G C G C"
+        - "C C C C C"
+        - "C G C G C"
+        binds:
+          F: 
+            item: COAL
+            num: 8
+          g:
+            item: GOLD_ORE
+            num: 16
+          G:
+            item: GOLD_INGOT
+            num: 16
+          C:
+            item: COBBLESTONE
+            num: 2
+      reforging:
+        name: Iron Reforging
+        time: 30
+        input:
+        - "I I F I I"
+        - " O     O "
+        - "I I F I I"
+        output:
+        - "R R   R R"
+        - "         "
+        - "R R   R R"
+        binds:
+          I:
+            item: IRON_INGOT
+            num: 8
+          O:
+            item: OBSIDIAN
+            num: 2
+          F:
+            item: COAL
+            num: 16
+          R:
+            item: MOD:REFORGED_IRON
+            num: 4
+  corruptor:
+    name: Corruptor
+    layout:
+      blocks:
+        1:
+        - " M@M "
+        - "NFJFN"
+        2:
+        - "  *  "
+        - "OWCWO"
+        3:
+        - "     "
+        - "OR RO"
+      binds:
+        M: COBBLE_WALL
+        N: NOTE_BLOCK
+        F: FURNACE
+        J: JACK_O_LANTERN
+        W: WORKBENCH
+        O: OBSIDIAN
+        C: COAL_BLOCK
+        R: REDSTONE_BLOCK
+    recipes:
+      essence:
+        name: Essence of Corruption Synthesis
+        time: 60
+        input:
+        - "SNR g RNS"
+        - " C RTR C "
+        - "bLb g bLb"
+        output:
+        - "         "
+        - " E     E "
+        - " B     B "
+        binds:
+          B:
+            item: BUCKET
+            num: 1
+          E:
+            item: MOD:ESSENCE_OF_CORRUPTION
+            num: 32
+          L:
+            item: LAVA_BUCKET
+            num: 1
+          b:
+            item: GOLD_NUGGET
+            num: 4
+          g:
+            item: GLOWSTONE_DUST
+            num: 12
+          C:
+            item: COAL
+            num: 8
+            dmg: 0
+          N:
+            item: NETHERRACK
+            num: 32
+          S:
+            item: SOUL_SAND
+            num: 8
+          R:
+            item: REDSTONE
+            num: 8
+          T:
+            item: GHAST_TEAR
+            num: 1
+      netherrack:
+        name: Netherrack Corruption
+        time: 15
+        input:
+        - "CCC r CCC"
+        - "CEC r CEC"
+        - "CCC r CCC"
+        output:
+        - "N N   N N"
+        - "         "
+        - "N N   N N"
+        binds:
+          C:
+            item: COBBLESTONE
+            num: 16
+          E:
+            item: MOD:ESSENCE_OF_CORRUPTION
+            num: 2
+          r:
+            item: REDSTONE
+            num: 2
+          N:
+            item: NETHERRACK
+            num: 24
+      soulsand:
+        name: Soulsand Corruption
+        time: 15
+        input:
+        - "CCC r CCC"
+        - "CEC r CEC"
+        - "CCC r CCC"
+        output:
+        - "N N   N N"
+        - " c     c "
+        - "N N   N N"
+        binds:
+          C:
+            item: SAND
+            num: 4
+          E:
+            item: MOD:ESSENCE_OF_CORRUPTION
+            num: 2
+          r:
+            item: COCOA
+            num: 2
+          N:
+            item: SOUL_SAND
+            num: 3
+          c:
+            item: COAL
+            num: 2
+      biomass:
+        name: Biomass Corruption
+        time: 15
+        input:
+        - "M   b   M"
+        - " B  E  B "
+        - "M   b   M"
+        output:
+        - "r       r"
+        - " C  c  C "
+        - "r       r"
+        binds:
+          M:
+            item: MAGMA_CREAM
+            num: 2
+          E:
+            item: MOD:ESSENCE_OF_CORRUPTION
+            num: 4
+          b:
+            item: BLAZE_POWDER
+            num: 2
+          B:
+            item: MOD:BIOMASS
+            num: 16
+          c:
+            item: COAL
+            num: 4
+          C:
+            item: MOD:CORRUPT_BIOMASS
+            num: 12
+          r:
+            item: ROTTEN_FLESH
+            num: 2
+          
+          
+        
+      
