@@ -346,7 +346,47 @@ factories:
           r:
             item: ROTTEN_FLESH
             num: 2
-          
+  iron_weapondry:
+    name:Iron Armory
+    layout:
+      blocks:
+        1:
+        - " C@A "
+        - " ISI "
+        2:
+        - " cIc "
+        - " I*I "
+        3:
+        - "     "
+        - "     "
+        binds:
+          C: CAULDRON
+          A: ANVIL
+          I: IRON_BLOCK
+          c: COBBLE_WALL
+          S: STONE
+      recipes:
+        ironChestplate:
+          name: 'Iron Chestplate(charcoal)'
+          time: 30
+          input:
+          - "   III   "
+          - "    F    "
+          - "         "
+          output:
+          - "iiiiiiiii"
+          - "iiiiiiiii"
+          - "iiiiiiiii"
+          binds:
+            I:
+              IRON_INGOT
+              num: 64
+            F: COAL
+              num: 4
+              dmg: 1
+            i: IRON_CHESTPLATE
+              num: 1
+              
           
         
       
