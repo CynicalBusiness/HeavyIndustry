@@ -368,15 +368,15 @@ factories:
       recipes:
         ironChestplate:
           name: 'Iron Chestplate(charcoal)'
-          time: '30'
+          time: 30
           input:
-          - " I I I I "
+          - "   III   "
           - "    F    "
           - "         "
           output:
-          - "  iiiii  "
-          - "  iiiii  "
-          - "  iiiii  "
+          - "iiiiiiiii"
+          - "iiiiiiiii"
+          - "iiiiiiiii"
           binds:
             I:
               IRON_INGOT
