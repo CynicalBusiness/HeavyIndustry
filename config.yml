@@ -370,13 +370,13 @@ factories:
           name: 'Iron Chestplate(charcoal)'
           time: '30'
           input:
-          -" I I I I "
-          -"    F    "
-          -"         "
+          - " I I I I "
+          - "    F    "
+          - "         "
           output:
-          -"  iiiii  "
-          -"  iiiii  "
-          -"  iiiii  "
+          - "  iiiii  "
+          - "  iiiii  "
+          - "  iiiii  "
           binds:
             I:
               IRON_INGOT
